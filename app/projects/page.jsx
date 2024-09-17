@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import React, { useState } from "react";
+import React, { act, useState } from "react";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
@@ -12,6 +12,7 @@ import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/comp
 
 import Link from "next/link";
 import Image from "next/image";
+import WorkSliderBtns from "@/components/WorkSliderBtns";
 
 const projects = [
    {
@@ -20,7 +21,7 @@ const projects = [
       title: "project 1",
       description: "blah blah blah blah blah blah blahblahblah blah",
       stack: [{ name: "Html 5" }, { name: "Css 3" }, { name: "Javascript" }],
-      image: '/assets/work/thumb1.png',
+      image: '/assets/assets/work/thumb1.png',
       live: "",
       github: "",
    },
@@ -30,7 +31,7 @@ const projects = [
       title: "project 1",
       description: "blah blah blah blah blah blah blahblahblah blah",
       stack: [{ name: "Html 5" }, { name: "Css 3" }, { name: "Javascript" }],
-      image: '/assets/work/thumb2.png',
+      image: '/assets/assets/work/thumb2.png',
       live: "",
       github: "",
    },
@@ -40,7 +41,7 @@ const projects = [
       title: "project 1",
       description: "blah blah blah blah blah blah blahblahblah blah",
       stack: [{ name: "Html 5" }, { name: "Css 3" }, { name: "Javascript" }],
-      image: '/assets/work/thumb3.png',
+      image: '/assets/assets/work/thumb3.png',
       live: "",
       github: "",
    },
@@ -50,7 +51,7 @@ const projects = [
       title: "project 1",
       description: "blah blah blah blah blah blah blahblahblah blah",
       stack: [{ name: "Html 5" }, { name: "Css 3" }, { name: "Javascript" }],
-      image: '/assets/work/thumb1.png',
+      image: '/assets/assets/work/thumb1.png',
       live: "",
       github: "",
    },
@@ -63,13 +64,16 @@ const Projects = () => {
       // get current slide index
       const currentIndex = swiper.activeIndex;
       // update project state based on current slide index
-      setProject(project[currentIndex]);
+      setProject(projects[currentIndex]);
    }
 
    return (
       <motion.section
          initial={{ opacity: 0 }}
-         animate={{ opacity: 1 }}
+         animate={{
+            opacity: 1,
+            transition: { delay: 2.4, duration: 0.4, ease: "easeIn", }
+         }}
          className="min-h-[80vh] flex flex-col justify-center py-12 xl:px-0"
       >
          <div className="container mx-auto">
@@ -136,8 +140,32 @@ const Projects = () => {
                      onSlideChange={handleSlideChange}
                   >
                      {projects.map((project, index) => {
-                        return <SwiperSlide key={index}>slide</SwiperSlide>;
+                        return (
+                           <SwiperSlide 
+                              key={index}
+                              className="w-full"
+                           >
+                              <div className="h-[460px] relative group flex justify-center items-center bg-pink-50/20">
+                                 {/* overlay */}
+                                 <div className="absolute top-0 bottom-0 w-full h-full bg-black/10 z-10"></div>
+                                 {/* image */}
+                                 <div className="relative w-full h-full">
+                                    <Image 
+                                       src={project.image} 
+                                       fill 
+                                       className="object-cover" 
+                                       alt=""
+                                    />
+                                 </div>
+                              </div>
+                           </SwiperSlide>
+                        );
                      })}
+                     {/* slider buttons */}
+                     <WorkSliderBtns 
+                        containerStyles="flex gap-2 absolute right-0 bottom-[calc(50%_-_22px)] xl:bottom-0 z-20 w-full justify-between xl:w-max xl:justify-none"
+                        btnStyles="bg-accent hover:bg-accent-hover text-primary text-[22px] w-[44px] h-[44px] flex justify-center items-center transition-all"
+                     />
                   </Swiper>
                </div>
             </div>

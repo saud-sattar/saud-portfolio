@@ -38,8 +38,8 @@ const Nav = () => {
                   href={link.path}
                   key={index}
                   className={`
-                            ${link.path === pathname && "text-accent border-b-2 border-accent"}
-                        capitalize font-medium hover:text-accent transition-all`}
+                            ${link.path === pathname && "text-[#ff1654] border-b-2 border-[#ff1654]"}
+                        capitalize font-medium hover:text-[#eddea4] transition-all`}
                >
                   {link.name}
                </Link>

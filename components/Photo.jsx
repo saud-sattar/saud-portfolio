@@ -5,7 +5,7 @@ import Image from "next/image";
 
 const Photo = () => {
    return (
-      <div className="w-full h-full relative">
+      <div className="relative w-full h-full flex justify-center items-center">
          <motion.div
             initial={{ opacity: 0 }}
             animate={{
@@ -34,19 +34,20 @@ const Photo = () => {
 
             {/* circe */}
             <motion.svg
-               className="w-[300px] xl:w-[506px] h-[300px] xl:h-[506px]"
+               className="w-[300px] xl:w-[500px] h-[300px] xl:h-[500px]"
                fill="transparent"
-               viewBox="0 0 506 506"
+               viewBox="0 0 500 500"
                xmlns="http://www.w3.org/2000/svg"
             >
                <motion.circle
-                  cx="253"
-                  cy="253"
-                  r="250"
-                  stroke="#00ff99"
-                  strokeWidth="7"
+                  cx="250"
+                  cy="250"
+                  r="247"
+                  stroke="#ff1654"
+                  strokeWidth="6"
                   strokeLinecap="round"
                   strokeLinejoin="round"
+                  strokeOpacity="1"
                   initial={{ strokeDasharray: "24 10 0 0" }}
                   animate={{
                      strokeDasharray: ["15 120 25 25", "16 25 92 72", "4 250 22 22"],

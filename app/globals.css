@@ -4,7 +4,7 @@
 
 @layer base {
   body {
-    @apply font-primary bg-[#084c61]/50 text-white leading-loose;
+    @apply font-primary bg-[#084c61]/30 text-white leading-loose;
   }
 
   .h1 {
@@ -25,5 +25,9 @@
 
   .text-outline-hover {
     -webkit-text-stroke: 1px #eddea4;
+  }
+
+  .text-outline-red {
+    -webkit-text-stroke: 1px #ff1654;
   }
 }

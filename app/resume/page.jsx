@@ -181,7 +181,7 @@ const Resume = () => {
                            <ul className="grid grid-cols-1 lg:grid-cols-2 gap-[30px]">
                               {exeperience.items.map((item, index) => {
                                  return (
-                                    <li key={index} className="bg-[#084c61]/30 h-[184px] py-6 px-10 rounded-xl flex flex-col justify-center items-center lg:items-start gap-1">
+                                    <li key={index} className="bg-[#1D3557]/30 h-[184px] py-6 px-10 rounded-xl flex flex-col justify-center items-center lg:items-start gap-1">
                                        <span className="text-[#eddea4]">{item.duration}</span>
                                        <h3 className="text-xl max-w-[260px] min-h-[60px] text-center lg:text-left">
                                           {item.position}
@@ -209,7 +209,7 @@ const Resume = () => {
                            <ul className="grid grid-cols-1 lg:grid-cols-2 gap-[30px]">
                               {education.items.map((item, index) => {
                                  return (
-                                    <li key={index} className="bg-[#084c61]/30 h-[240px] py-6 px-10 rounded-xl flex flex-col justify-center items-center lg:items-start gap-1">
+                                    <li key={index} className="bg-[#1D3557]/30 h-[240px] py-6 px-10 rounded-xl flex flex-col justify-center items-center lg:items-start gap-1">
                                        <span className="text-[#eddea4]">{item.duration}</span>
                                        <h3 className="text-xl max-w-[260px] min-h-[60px] text-center lg:text-left">
                                           {item.degree}
@@ -241,7 +241,7 @@ const Resume = () => {
                               return <li key={index}>
                                  <TooltipProvider delayDuration={100}>
                                     <Tooltip>
-                                       <TooltipTrigger className="w-full h-[150px] bg-[#084c61]/30 rounded-xl flex justify-center items-center group">
+                                       <TooltipTrigger className="w-full h-[150px] bg-[#1D3557]/30 rounded-xl flex justify-center items-center group">
                                           <div className="text-6xl group-hover:text-[#ff1654] transition-all duration-300">{skill.icon}</div>
                                        </TooltipTrigger>
                                        <TooltipContent>
@@ -261,12 +261,12 @@ const Resume = () => {
                         <p className="max-w-[600px] text-[#f9f7f3]/60 mx-auto xl:mx-0">
                            {about.description}
                         </p>   
-                        <div className="bg-[#084c61]/30 py-6 px-10 rounded-xl flex flex-col justify-center items-center lg:items-start gap-1">
+                        <div className="bg-[#1D3557]/30 py-6 px-10 rounded-xl flex flex-col justify-center items-center lg:items-start gap-1">
                            <ul className="grid grid-cols-1 xl:grid-cols-2 gap-y-6 max-w-[620px] max-auto xl:mx-0">
                               {about.info.map((item, index) => {
                                  return (
                                     <li key={index} className="flex items-center justify-center xl:justify-start gap-4">
-                                       <span className="text-[#ff1654]/60">{item.fieldName}</span>
+                                       <span className="text-[#ff1654]">{item.fieldName}</span>
                                        <span className="text-xl text-[#f9f7f3]">{item.fieldValue}</span>
                                     </li>
                                  );

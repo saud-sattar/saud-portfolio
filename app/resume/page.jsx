@@ -14,7 +14,7 @@ import { SiTailwindcss, SiNextdotjs } from "react-icons/si";
 // about data
 const about = {
    title: "About me",
-   description: "yappayappayappayappayappayappayappa",
+   description: "A quick run down about me :)",
    info: [
       {
          fieldName: "Name",
@@ -45,47 +45,45 @@ const about = {
 
 // exeperience data
 const exeperience = {
-   icon: "/assets/resume/badge.svg",
    title: "My experience",
-   description: "yappayappayappayappayappayappayappa",
+   description: "I pretty much have no experience as a student, but I'm hoping you can change that :D.",
    items: [
       {
-         company: "Tech R Us",
-         position: "Full stack developer",
-         duration: "2022 - Present",
+         company: "...",
+         position: "Nothing So Far...",
+         duration: "...",
       },
-      {
-         company: "Tech R You",
-         position: "Full stack developer",
-         duration: "2020 - 2022",
-      },
-      {
-         company: "Tech R We",
-         position: "Full stack developer",
-         duration: "2018 - 2020",
-      }, {
-         company: "Tech R Us",
-         position: "Full stack developer",
-         duration: "2022 - Present",
-      },
-      {
-         company: "Tech R You",
-         position: "Full stack developer",
-         duration: "2020 - 2022",
-      },
-      {
-         company: "Tech R We",
-         position: "Full stack developer",
-         duration: "2018 - 2020",
-      },
+      // {
+      //    company: "Tech R You",
+      //    position: "Full stack developer",
+      //    duration: "2020 - 2022",
+      // },
+      // {
+      //    company: "Tech R We",
+      //    position: "Full stack developer",
+      //    duration: "2018 - 2020",
+      // }, {
+      //    company: "Tech R Us",
+      //    position: "Full stack developer",
+      //    duration: "2022 - Present",
+      // },
+      // {
+      //    company: "Tech R You",
+      //    position: "Full stack developer",
+      //    duration: "2020 - 2022",
+      // },
+      // {
+      //    company: "Tech R We",
+      //    position: "Full stack developer",
+      //    duration: "2018 - 2020",
+      // },
    ]
 };
 
 // education data
 const education = {
-   icon: "/assets/resume/cap.svg",
    title: "My education",
-   description: "yappayappayappayappayappayappayappa",
+   description: "I am still completing my Honours but here is a little breakdown of my current Educational progress.",
    items: [
       {
          insitution: "University Of Technology Sydney [UTS]",
@@ -103,7 +101,7 @@ const education = {
 // skills data
 const skills = {
    title: "My skills",
-   description: "yappayappayappayappayappayappayappa",
+   description: "I am some what proficient in these languages, but I'm sure there is more I can learn.",
    skillList: [
       {
          icon: <FaHtml5 />,
@@ -133,10 +131,10 @@ const skills = {
          icon: <FaNodeJs />,
          name: "node.js",
       },
-      {
-         icon: <FaFigma />,
-         name: "figma",
-      },
+      // {
+      //    icon: <FaFigma />,
+      //    name: "figma",
+      // },
    ]
 };
 
@@ -174,7 +172,7 @@ const Resume = () => {
                   <TabsContent value="experience" className="w-full">
                      <div className="flex flex-col gap-[30px] text-center xl:text-left">
                         <h3 className="text-4xl font-bold text-[#f9f7f3]">{exeperience.title}</h3>
-                        <p className="max-w-[600px] text-[#f9f7f3]/60 mx-auto xl:mx-0">
+                        <p className="max-w-[600px] text-[#f9f7f3] mx-auto xl:mx-0">
                            {exeperience.description}
                         </p>
                         <ScrollArea className="h-[480px]">
@@ -202,7 +200,7 @@ const Resume = () => {
                   <TabsContent value="education" className="w-full">
                      <div className="flex flex-col gap-[30px] text-center xl:text-left">
                         <h3 className="text-4xl font-bold">{education.title}</h3>
-                        <p className="max-w-[600px] text-[#f9f7f3]/60 mx-auto xl:mx-0">
+                        <p className="max-w-[600px] text-[#f9f7f3] mx-auto xl:mx-0">
                            {education.description}
                         </p>
                         <ScrollArea className="h-[480px]">
@@ -231,7 +229,7 @@ const Resume = () => {
                      <div className="flex flex-col gap-[30px]">
                         <div className="flex flex-col gap-[30px] text-center xl:text-left">
                         <h3 className="text-4xl font-bold">{skills.title}</h3>
-                        <p className="max-w-[600px] text-[#f9f7f3]/60 mx-auto xl:mx-0">
+                        <p className="max-w-[600px] text-[#f9f7f3] mx-auto xl:mx-0">
                            {skills.description}
                         </p>
                         </div>
@@ -258,7 +256,7 @@ const Resume = () => {
                   <TabsContent value="about" className="w-full text-center xl:text-left">
                      <div className="flex flex-col gap-[30px]">
                         <h3 className="text-4xl font-bold">{about.title}</h3>
-                        <p className="max-w-[600px] text-[#f9f7f3]/60 mx-auto xl:mx-0">
+                        <p className="max-w-[600px] text-[#f9f7f3] mx-auto xl:mx-0">
                            {about.description}
                         </p>   
                         <div className="bg-[#1D3557]/30 py-6 px-10 rounded-xl flex flex-col justify-center items-center lg:items-start gap-1">

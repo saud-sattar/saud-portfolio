@@ -17,13 +17,13 @@ import WorkSliderBtns from "@/components/WorkSliderBtns";
 const projects = [
    {
       num: "01",
-      category: "frontend",
+      category: "Sierra- The Text Editor",
       title: "project 1",
-      description: "blah blah blah blah blah blah blahblahblah blah",
-      stack: [{ name: "Html 5" }, { name: "Css 3" }, { name: "Javascript" }],
+      description: "Sierra is a quick little project I wanted to explore to learn more about C and how it works. Sierra gets its name from the NATO phonetic alphapet and is named after my inital, 'S'.",
+      stack: [{ name: "C" }, { name: "Make" }, { name: "Shell Scripting" }],
       image: '/assets/assets/work/thumb1.png',
       live: "",
-      github: "",
+      github: "https://github.com/saud-sattar/sierra-project",
    },
    {
       num: "02",
@@ -86,7 +86,7 @@ const Projects = () => {
                      </div>
                      {/* project category */}
                      <h2 className="text-[42px] font-bold leading-none text-[#f9f7f3] group-hover:text-[#eddea4] transition-all duration-500 capitalize">
-                        {project.category} project
+                        {project.category}
                      </h2>
                      {/* project description */}
                      <p className="text-white/60">{project.description}</p>
@@ -104,31 +104,34 @@ const Projects = () => {
                      {/* buttons */}
                      <div className="flex items-center gap-4">
                         {/* live project button */}
-                        <Link href={project.live}>
-                           <TooltipProvider delayDuration={100}>
-                              <Tooltip>
-                                 <TooltipTrigger className="w-[70px] h-[70px] rounded-full bg-white/5 flex justify-center items-center group">
-                                    <BsArrowUpRight className="text-white text-3xl group-hover:text-[#eddea4]
-"/>
-                                 </TooltipTrigger>
-                                 <TooltipContent>
-                                    <p>Live project</p>
-                                 </TooltipContent>
-                              </Tooltip>
-                           </TooltipProvider>
+                        <Link href={project.live} legacyBehavior>
+                           <a target="_blank" rel="noopener noreferrer">
+                              <TooltipProvider delayDuration={100}>
+                                 <Tooltip>
+                                    <TooltipTrigger className="w-[70px] h-[70px] rounded-full bg-white/5 flex justify-center items-center group">
+                                       <BsArrowUpRight className="text-white text-3xl group-hover:text-[#eddea4]"/>
+                                    </TooltipTrigger>
+                                    <TooltipContent>
+                                       <p>Live project</p>
+                                    </TooltipContent>
+                                 </Tooltip>
+                              </TooltipProvider>
+                           </a>
                         </Link>
                         {/* github project button */}
-                        <Link href={project.github}>
-                           <TooltipProvider delayDuration={100}>
-                              <Tooltip>
-                                 <TooltipTrigger className="w-[70px] h-[70px] rounded-full bg-white/5 flex justify-center items-center group">
-                                    <BsGithub className="text-white text-3xl group-hover:text-[#eddea4]"/>
-                                 </TooltipTrigger>
-                                 <TooltipContent>
-                                    <p>Github repository</p>
-                                 </TooltipContent>
-                              </Tooltip>
-                           </TooltipProvider>
+                        <Link href={project.github} legacyBehavior>
+                           <a target="_blank" rel="noopener noreferrer">
+                              <TooltipProvider delayDuration={100}>
+                                 <Tooltip>
+                                    <TooltipTrigger className="w-[70px] h-[70px] rounded-full bg-white/5 flex justify-center items-center group">
+                                       <BsGithub className="text-white text-3xl group-hover:text-[#eddea4]"/>
+                                    </TooltipTrigger>
+                                    <TooltipContent>
+                                       <p>Github repository</p>
+                                    </TooltipContent>
+                                 </Tooltip>
+                              </TooltipProvider>
+                           </a>
                         </Link>
                      </div>
                   </div>

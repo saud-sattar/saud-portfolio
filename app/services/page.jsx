@@ -5,28 +5,26 @@ import Link from "next/link";
 
 const services = [
    {
-      num: '01',
-      title: 'Web development',
-      description: 'write whatever I want to write I guess',
-      href: ""
+      num: "01",
+      title: "Web development",
+      description: "write whatever I want to write I guess",
+      href: "",
    },
    {
-      num: '02',
-      title: 'Web development',
-      description: 'write whatever I want to write I guess',
-      href: ""
+      num: "02",
+      title: "Web development",
+      description: "write whatever I want to write I guess",
+      href: "",
    },
    {
-      num: '03',
-      title: 'Web development',
-      description: 'write whatever I want to write I guess',
-      href: ""
+      num: "03",
+      title: "Web development",
+      description: "write whatever I want to write I guess",
+      href: "",
    },
 ];
 
 import { motion } from "framer-motion";
-
-
 
 const Services = () => {
    return (

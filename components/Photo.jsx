@@ -16,12 +16,12 @@ const Photo = () => {
          >
             {/* Image */}
             <Image
-               src="/assets/temp2.0.jpg"
+               src="/assets/photo.jpg"
                priority
                quality={100}
                fill
                alt="Photo"
-               className="object-contain rounded-full p-1 xl:p-1.5"
+               className="object-cover rounded-full p-1 xl:p-1.5 object-[0%_0%]"
             />
 
             {/* Circle SVG */}
@@ -42,7 +42,11 @@ const Photo = () => {
                   strokeOpacity="1"
                   initial={{ strokeDasharray: "24 10 0 0" }}
                   animate={{
-                     strokeDasharray: ["15 120 25 25", "16 25 92 72", "4 250 22 22"],
+                     strokeDasharray: [
+                        "15 120 25 25",
+                        "16 25 92 72",
+                        "4 250 22 22",
+                     ],
                      rotate: [120, 360],
                   }}
                   transition={{

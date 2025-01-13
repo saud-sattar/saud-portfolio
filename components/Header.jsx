@@ -12,13 +12,14 @@ const Header = () => {
             {/* logo */}
             <Link href="/">
                <h1 className="text-4xl font-semibold">
-                  <span className="text-[#eddea4]">S</span>attar<span className="text-[#ff1654]">.</span>
+                  <span className="text-[#eddea4]">S</span>attar
+                  <span className="text-[#e0144c]">.</span>
                </h1>
             </Link>
             {/* desktop nav */}
             <div className="hidden xl:flex items-center gap-8">
                <Nav />
-               <Link href='/contact'>
+               <Link href="/contact">
                   <Button>Hire me</Button>
                </Link>
             </div>
@@ -27,10 +28,9 @@ const Header = () => {
             <div className="xl:hidden">
                <MobileNav />
             </div>
-
          </div>
       </header>
-   )
-}
+   );
+};
 
-export default Header
+export default Header;
